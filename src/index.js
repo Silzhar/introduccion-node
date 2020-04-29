@@ -1,6 +1,6 @@
 var http =require ('http');
 var fs = require('fs');
-var {info} = require('./modules/my-log');
+var {info, error} = require('./modules/my-log');
 
 var server =  http.createServer((function(request, response){
     
@@ -17,15 +17,15 @@ var server =  http.createServer((function(request, response){
         response.end();
     }
     else if(request.url==='/info'){
-        var result = log.info(request.url);
+        var result = info(request.url);
         response.writeHead(200,{'Content-Type':'text/html'});  
         response.write(result);
         response.end();
-    // }else if(request.url==='/error'){
-    //     var result = log.error(request.url);
-    //     response.writeHead(200,{'Content-Type':'text/html'});  
-    //     response.write(result);
-    //     response.end();
+    }else if(request.url==='/error'){
+        var result = error(request.url);
+        response.writeHead(200,{'Content-Type':'text/html'});  
+        response.write(result);
+        response.end();
     }
     else{
         response.writeHead(404,{'Content-Type':'text/html'});
