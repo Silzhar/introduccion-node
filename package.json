@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Silzhar/introduccion-node/issues"
   },
-  "homepage": "https://github.com/Silzhar/introduccion-node#readme"
+  "homepage": "https://github.com/Silzhar/introduccion-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
