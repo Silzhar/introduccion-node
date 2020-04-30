@@ -1,3 +1,5 @@
 run-node.png
 run-npm.png
 terminal.txt
+node_modules/
+.DS_Store
