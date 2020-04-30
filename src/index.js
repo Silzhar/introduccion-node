@@ -11,6 +11,14 @@ app.get('/', function(request, response){
     response.status(200).send('HELLO');
 });
 
+app.get('/info', function(request, response){
+    response.send('info nodemon');
+})
+
+app.get('*', function(request, response){
+    response.status(404).send('NOT FOUND');
+});
+
 // var server =  http.createServer((function(request, response){
 
 //     var parsed = url.parse(request.url);
