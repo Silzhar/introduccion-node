@@ -18,7 +18,6 @@ app.get('/info', function(request, response){
 app.get('/country',(request, response) => {
     console.log('request.query :',request.query);
     response.json(countries[request.query.code]);
-
 });
 
 app.get('*', function(request, response){
@@ -73,6 +72,7 @@ app.get('*', function(request, response){
 app.listen(4000,function(){
     console.log('running on 4000');
     
-})
+});
+
 // server.listen(4000);
 // console.log('running on 4000');
