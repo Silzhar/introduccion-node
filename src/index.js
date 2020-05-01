@@ -13,7 +13,13 @@ app.get('/', function(request, response){
 
 app.get('/info', function(request, response){
     response.send('info nodemon');
-})
+});
+
+app.get('/country',(request, response) => {
+    console.log('request.query :',request.query);
+    response.json(countries[request.query.code]);
+
+});
 
 app.get('*', function(request, response){
     response.status(404).send('NOT FOUND');
